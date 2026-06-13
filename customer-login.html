@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Customer Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="login-shell" data-role="customer" data-dashboard="customer-dashboard.html">
+    <section class="login-card">
+      <a class="back-link" href="role-selection.html">Back to role selection</a>
+      <div class="brand-row">
+        <div class="brand-copy">
+          <div class="brand-name">Guramrit Restro & Cafe</div>
+          <div class="brand-subtitle">Customer access</div>
+        </div>
+      </div>
+      <div class="role-badge">Customer</div>
+      <h1>Customer Login</h1>
+      <p class="login-intro">Sign in to order your favorite meals, track delivery, and manage your account.</p>
+      <div class="onboarding-note">First time here? Create your account once, then use this login on future visits.</div>
+      <div class="onboarding-note" id="create-account">New customers can register below before signing in.</div>
+      <form class="form-grid" data-login-form>
+        <div class="field">
+          <label for="customer-email">Email</label>
+          <input id="customer-email" type="email" data-login-email placeholder="you@example.com" />
+        </div>
+        <div class="field">
+          <label for="customer-password">Password</label>
+          <input id="customer-password" type="password" data-login-password placeholder="Enter your password" />
+        </div>
+        <div class="field-row">
+          <p class="helper-text">Use your registered email and password.</p>
+          <a class="action-link" href="#forgot-password">Forgot password?</a>
+        </div>
+        <button class="submit-btn" type="submit">Login</button>
+      </form>
+      <form class="form-grid" data-register-form>
+        <div class="field">
+          <label for="customer-name">Name</label>
+          <input id="customer-name" type="text" data-register-name placeholder="Your full name" />
+        </div>
+        <div class="field">
+          <label for="customer-register-email">Email</label>
+          <input id="customer-register-email" type="email" data-register-email placeholder="you@example.com" />
+        </div>
+        <div class="field">
+          <label for="customer-register-password">Password</label>
+          <input id="customer-register-password" type="password" data-register-password placeholder="Create a password" />
+        </div>
+        <button class="ghost-link" type="submit">Create Account</button>
+      </form>
+      <p class="note" data-login-status aria-live="polite"></p>
+      <div class="login-footer">
+        <a class="action-link" href="customer-dashboard.html">View Dashboard</a>
+      </div>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
+

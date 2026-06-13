@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Admin Employees</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="admin-pages.css" />
+</head>
+<body>
+  <main class="admin-shell dashboard-shell" data-role="admin">
+    <header class="dashboard-header">
+      <a class="brand-link" href="admin-dashboard.html"><div class="brand-copy"><strong>Guramrit Restro & Cafe</strong><span>Employees</span></div></a>
+      <button class="logout-btn" type="button" data-logout>Logout</button>
+    </header>
+    <section class="dashboard-hero"><p class="eyebrow">Employees</p><h1>Team management</h1><p>Add employees, remove employees, and review the current roster.</p></section>
+    <section class="page-grid">
+      <article class="panel">
+        <div class="toolbar-row"><div><div class="section-badge">Add employee</div><h2>Employee form</h2></div><button class="ghost-btn" type="button" id="reset-employees">Reset Team</button></div>
+        <form id="employee-form" class="field-grid">
+          <input type="hidden" id="employee-id" />
+          <input id="employee-name" type="text" placeholder="Employee name" required />
+          <input id="employee-email" type="email" placeholder="employee@Guramrit Restro & Cafe.com" required />
+          <input id="employee-role" type="text" placeholder="Kitchen / Service / Delivery" required />
+          <input id="employee-phone" type="text" placeholder="Phone number" />
+          <select id="employee-status"><option>Active</option><option>On Leave</option><option>Inactive</option></select>
+          <button class="primary-btn" type="submit">Save Employee</button>
+        </form>
+      </article>
+      <article class="panel">
+        <div class="section-badge">Roster</div><h2>Current employees</h2>
+        <div class="employee-list" id="employee-list"></div>
+      </article>
+    </section>
+  </main>
+  <nav class="manager-nav" aria-label="Admin navigation">
+    <a class="nav-item" href="admin-dashboard.html"><span class="icon">🏠</span><span class="label">Dashboard</span></a>
+    <a class="nav-item" href="admin-menu.html"><span class="icon">🍽️</span><span class="label">Menu</span></a>
+    <a class="nav-item active" href="admin-employees.html"><span class="icon">👥</span><span class="label">Employees</span></a>
+    <a class="nav-item" href="admin-customers.html"><span class="icon">🧑‍🤝‍🧑</span><span class="label">Customers</span></a>
+    <a class="nav-item" href="admin-reports.html"><span class="icon">📊</span><span class="label">Reports</span></a>
+    <a class="nav-item" href="admin-revenue.html"><span class="icon">💰</span><span class="label">Revenue</span></a>
+    <a class="nav-item" href="admin-settings.html"><span class="icon">⚙️</span><span class="label">Settings</span></a>
+  </nav>
+  <script src="auth.js"></script>
+  <script src="admin-store.js"></script>
+  <script src="admin-nav.js"></script>
+  <script src="admin-employees.js"></script>
+</body>
+</html>

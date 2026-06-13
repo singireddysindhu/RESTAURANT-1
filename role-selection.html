@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Role Selection</title>
+  <link rel="stylesheet" href="role-selection.css" />
+</head>
+<body>
+  <main class="selection-shell">
+    <section class="hero">
+      <p class="eyebrow">Guramrit Restro & Cafe access</p>
+      <h1>Select Your Role</h1>
+      <p class="subtitle">Choose the login path that matches your profile and continue in one tap.</p>
+    </section>
+
+    <section class="roles-grid" aria-label="Role options">
+      <article class="role-card role-customer">
+        <div class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 64 64" class="role-icon">
+            <circle cx="32" cy="20" r="10" fill="currentColor" opacity="0.95" />
+            <path d="M16 54c2-10 10-16 16-16s14 6 16 16" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+            <path d="M18 27h28" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h2>Customer</h2>
+        <p>Order meals, track delivery, and enjoy fresh food at your doorstep.</p>
+        <a class="login-btn" href="customer-login.html">Login</a>
+      </article>
+
+      <article class="role-card role-employee">
+        <div class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 64 64" class="role-icon">
+            <path d="M20 18h24l4 10H16l4-10Z" fill="currentColor" opacity="0.95" />
+            <path d="M20 28h24l-2 22H22l-2-22Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" />
+            <path d="M24 33h16" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h2>Employee</h2>
+        <p>Manage orders, handle operations, and keep service flowing smoothly.</p>
+        <a class="login-btn" href="employee-login.html">Login</a>
+      </article>
+
+      <article class="role-card role-manager">
+        <div class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 64 64" class="role-icon">
+            <rect x="12" y="24" width="40" height="26" rx="8" fill="none" stroke="currentColor" stroke-width="4" />
+            <path d="M22 24v-5a10 10 0 0 1 20 0v5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <path d="M22 35h20" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h2>Manager</h2>
+        <p>Oversee staff, monitor performance, and control daily restaurant activity.</p>
+        <a class="login-btn" href="manager-login.html">Login</a>
+      </article>
+
+      <article class="role-card role-admin">
+        <div class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 64 64" class="role-icon">
+            <path d="M32 10 16 16v12c0 12 8 20 16 26 8-6 16-14 16-26V16L32 10Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" />
+            <path d="m24 32 6 6 10-12" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h2>Admin</h2>
+        <p>Control users, settings, permissions, and platform-level access.</p>
+        <a class="login-btn" href="admin-login.html">Login</a>
+      </article>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Admin Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="admin-pages.css" />
+</head>
+<body>
+  <main class="dashboard-shell admin-shell" data-role="admin">
+    <header class="dashboard-header">
+      <a class="brand-link" href="role-selection.html">
+        <div class="brand-copy">
+          <strong>Guramrit Restro & Cafe</strong>
+          <span>Admin Control Center</span>
+        </div>
+      </a>
+      <button class="logout-btn" type="button" data-logout>Logout</button>
+    </header>
+
+    <section class="dashboard-hero">
+      <p class="eyebrow">Signed in as admin</p>
+      <h1>Welcome back, <span data-user-email>guest</span></h1>
+      <p>Manage menu items, employees, customers, reports, revenue, and settings from your control center.</p>
+    </section>
+
+    <section class="nav-grid" aria-label="Admin pages">
+      <a href="admin-dashboard.html">Dashboard<span>Overview and status</span></a>
+      <a href="admin-menu.html">Menu Management<span>Add, edit, delete, upload images</span></a>
+      <a href="admin-employees.html">Employees<span>Add and remove staff</span></a>
+      <a href="admin-customers.html">Customers<span>Customer activity and orders</span></a>
+      <a href="admin-reports.html">Reports<span>Operational reporting</span></a>
+      <a href="admin-revenue.html">Revenue<span>Sales and earnings</span></a>
+      <a href="admin-settings.html">Settings<span>Restaurant configuration</span></a>
+    </section>
+
+    <section class="summary-grid" aria-label="Admin metrics">
+      <article class="summary-card"><div class="tile-badge">Menu</div><h2>Manage items</h2><p>Add or update dishes in the shared menu store.</p></article>
+      <article class="summary-card"><div class="tile-badge">Staff</div><h2>Employee control</h2><p>Add employees, remove employees, and keep a simple team roster.</p></article>
+      <article class="summary-card"><div class="tile-badge">Reports</div><h2>View performance</h2><p>Track orders, approvals, and customer activity.</p></article>
+      <article class="summary-card"><div class="tile-badge">Revenue</div><h2>Financial snapshot</h2><p>See estimated revenue from saved customer orders.</p></article>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+  <script src="order-store.js"></script>
+  <script src="admin-store.js"></script>
+</body>
+</html>

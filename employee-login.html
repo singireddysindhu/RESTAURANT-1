@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Employee Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="login-shell" data-role="employee" data-dashboard="employee-dashboard.html">
+    <section class="login-card">
+      <a class="back-link" href="role-selection.html">Back to role selection</a>
+      <div class="brand-row">
+        <div class="brand-copy">
+          <div class="brand-name">Guramrit Restro & Cafe</div>
+          <div class="brand-subtitle">Employee access</div>
+        </div>
+      </div>
+      <div class="role-badge">Employee</div>
+      <h1>Employee Login</h1>
+      <p class="login-intro">Access operational tools, order handling, and daily task management.</p>
+      <div class="onboarding-note">First time here? Create your account once, then use this login on future visits.</div>
+      <div class="onboarding-note" id="create-account">New employees can register below before signing in.</div>
+      <form class="form-grid" data-login-form>
+        <div class="field">
+          <label for="employee-email">Email</label>
+          <input id="employee-email" type="email" data-login-email placeholder="employee@example.com" />
+        </div>
+        <div class="field">
+          <label for="employee-password">Password</label>
+          <input id="employee-password" type="password" data-login-password placeholder="Enter your password" />
+        </div>
+        <div class="field-row">
+          <p class="helper-text">Use your registered email and password.</p>
+          <a class="action-link" href="#forgot-password">Forgot password?</a>
+        </div>
+        <button class="submit-btn" type="submit">Login</button>
+      </form>
+      <form class="form-grid" data-register-form>
+        <div class="field">
+          <label for="employee-name">Name</label>
+          <input id="employee-name" type="text" data-register-name placeholder="Your full name" />
+        </div>
+        <div class="field">
+          <label for="employee-register-email">Email</label>
+          <input id="employee-register-email" type="email" data-register-email placeholder="employee@example.com" />
+        </div>
+        <div class="field">
+          <label for="employee-register-password">Password</label>
+          <input id="employee-register-password" type="password" data-register-password placeholder="Create a password" />
+        </div>
+        <button class="ghost-link" type="submit">Create Account</button>
+      </form>
+      <p class="note" data-login-status aria-live="polite"></p>
+      <div class="login-footer">
+        <a class="action-link" href="employee-dashboard.html">View Dashboard</a>
+      </div>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
+

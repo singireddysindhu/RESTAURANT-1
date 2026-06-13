@@ -1,0 +1,201 @@
+:root {
+  --red: #c61f1f;
+  --red-deep: #8f1111;
+  --orange: #ff7a00;
+  --orange-soft: #ffb347;
+  --cream: #fff7ef;
+  --ink: #2b1410;
+  --card-shadow: 0 22px 60px rgba(143, 17, 17, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 0, 0.2), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(198, 31, 31, 0.16), transparent 32%),
+    linear-gradient(135deg, #fffdfb 0%, var(--cream) 100%);
+}
+
+.selection-shell {
+  min-height: 100vh;
+  padding: 32px 20px 40px;
+  display: grid;
+  gap: 24px;
+  align-content: center;
+}
+
+.hero {
+  text-align: center;
+  width: min(100%, 760px);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1;
+  color: var(--red-deep);
+}
+
+.subtitle {
+  max-width: 58ch;
+  margin: 14px auto 0;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  line-height: 1.6;
+  color: #6d2c18;
+}
+
+.roles-grid {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.role-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 24px 20px 22px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(198, 31, 31, 0.12);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(16px);
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 12px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.role-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 122, 0, 0.04));
+  pointer-events: none;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(198, 31, 31, 0.22);
+  box-shadow: 0 28px 70px rgba(143, 17, 17, 0.18);
+}
+
+.icon-wrap {
+  width: 84px;
+  height: 84px;
+  display: grid;
+  place-items: center;
+  border-radius: 24px;
+  color: white;
+  box-shadow: 0 16px 30px rgba(143, 17, 17, 0.18);
+}
+
+.role-customer .icon-wrap {
+  background: linear-gradient(135deg, #ff4d2d, #ff8a1c);
+}
+
+.role-employee .icon-wrap {
+  background: linear-gradient(135deg, #ff8a1c, #c61f1f);
+}
+
+.role-manager .icon-wrap {
+  background: linear-gradient(135deg, #c61f1f, #ff5c46);
+}
+
+.role-admin .icon-wrap {
+  background: linear-gradient(135deg, #ff5c46, #ffb347);
+}
+
+.role-icon {
+  width: 44px;
+  height: 44px;
+  color: currentColor;
+}
+
+.role-card h2 {
+  margin: 4px 0 0;
+  font-size: 1.35rem;
+  color: var(--red-deep);
+}
+
+.role-card p {
+  margin: 0;
+  color: #6e392a;
+  line-height: 1.55;
+  font-size: 0.98rem;
+}
+
+.login-btn {
+  position: relative;
+  z-index: 1;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, var(--red), var(--orange));
+  box-shadow: 0 12px 24px rgba(198, 31, 31, 0.22);
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(198, 31, 31, 0.3);
+  filter: saturate(1.06);
+}
+
+.login-btn:focus-visible {
+  outline: 3px solid rgba(255, 122, 0, 0.35);
+  outline-offset: 3px;
+}
+
+@media (max-width: 1080px) {
+  .roles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .selection-shell {
+    padding: 24px 16px 32px;
+    gap: 18px;
+  }
+
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .role-card {
+    padding: 22px 18px 20px;
+    border-radius: 24px;
+  }
+}

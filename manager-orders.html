@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Manager Orders</title>
+  <link rel="stylesheet" href="manager-pages.css" />
+</head>
+<body>
+  <main class="manager-shell">
+    <header class="topbar">
+      <a class="brand-link" href="manager-dashboard.html"><div class="brand-copy"><strong>Guramrit Restro & Cafe</strong><span>Manager Orders</span></div></a>
+      <div class="pill">Signed in as <span data-user-email>guest</span></div>
+    </header>
+
+    <section class="page-grid">
+      <article class="tracking-card">
+        <p class="section-badge">Orders</p>
+        <h1>Customer order approvals</h1>
+        <p>Approve customer orders before employees begin preparation.</p>
+        <div class="order-list" id="manager-order-list"></div>
+      </article>
+      <article class="list-card">
+        <p class="section-badge">Approval status</p>
+        <h2>Workflow</h2>
+        <div class="approval-track">
+          <div class="approval-step done"><span class="dot"></span>Order Received</div>
+          <div class="approval-step active"><span class="dot"></span>Manager Approval</div>
+          <div class="approval-step"><span class="dot"></span>Employee Preparation</div>
+          <div class="approval-step"><span class="dot"></span>Delivery</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <nav class="manager-nav" aria-label="Manager navigation">
+    <a class="nav-item" href="manager-dashboard.html"><span class="icon">🏠</span><span class="label">Dashboard</span></a>
+    <a class="nav-item active" href="manager-orders.html"><span class="icon">📦</span><span class="label">Orders</span></a>
+    <a class="nav-item" href="manager-employees.html"><span class="icon">👥</span><span class="label">Employees</span></a>
+    <a class="nav-item" href="manager-reports.html"><span class="icon">📊</span><span class="label">Reports</span></a>
+    <a class="nav-item" href="manager-profile.html"><span class="icon">👤</span><span class="label">Profile</span></a>
+  </nav>
+
+  <script src="order-store.js"></script>
+  <script src="manager-nav.js"></script>
+  <script src="manager-orders.js"></script>
+</body>
+</html>

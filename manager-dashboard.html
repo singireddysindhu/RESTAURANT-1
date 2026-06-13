@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Manager Dashboard</title>
+  <link rel="stylesheet" href="manager-pages.css" />
+</head>
+<body>
+  <main class="manager-shell">
+    <header class="topbar">
+      <a class="brand-link" href="manager-dashboard.html">
+        <div class="brand-copy">
+          <strong>Guramrit Restro & Cafe</strong>
+          <span>Manager Dashboard</span>
+        </div>
+      </a>
+      <div class="pill">Signed in as <span data-user-email>guest</span></div>
+    </header>
+
+    <section class="hero">
+      <p class="section-badge">Manager</p>
+      <h1>Welcome back, <span data-user-email>guest</span></h1>
+      <p>Approve customer orders before employees begin preparation, track team activity, and keep operations on schedule.</p>
+      <div class="quick-actions">
+        <a class="primary-btn" href="manager-orders.html">Review Orders</a>
+        <a class="ghost-btn" href="manager-employees.html">View Employees</a>
+      </div>
+    </section>
+
+    <section class="manager-grid">
+      <article class="tile">
+        <div class="metric-badge">Dashboard</div>
+        <h2>Operations overview</h2>
+        <p>See sales, pending approvals, and active staffing status in one place.</p>
+      </article>
+      <article class="tile">
+        <div class="metric-badge">Orders</div>
+        <h2>Approval queue</h2>
+        <p>Approve or hold customer orders before employees start kitchen preparation.</p>
+      </article>
+      <article class="tile">
+        <div class="metric-badge">Reports</div>
+        <h2>Daily performance</h2>
+        <p>Review service quality, resolution speed, and team progress.</p>
+      </article>
+    </section>
+  </main>
+
+  <nav class="manager-nav" aria-label="Manager navigation">
+    <a class="nav-item active" href="manager-dashboard.html"><span class="icon">🏠</span><span class="label">Dashboard</span></a>
+    <a class="nav-item" href="manager-orders.html"><span class="icon">📦</span><span class="label">Orders</span></a>
+    <a class="nav-item" href="manager-employees.html"><span class="icon">👥</span><span class="label">Employees</span></a>
+    <a class="nav-item" href="manager-reports.html"><span class="icon">📊</span><span class="label">Reports</span></a>
+    <a class="nav-item" href="manager-profile.html"><span class="icon">👤</span><span class="label">Profile</span></a>
+  </nav>
+
+  <script src="order-store.js"></script>
+  <script src="manager-nav.js"></script>
+</body>
+</html>

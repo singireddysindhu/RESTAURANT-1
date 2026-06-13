@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Attendance</title>
+  <link rel="stylesheet" href="employee-pages.css" />
+  <style>
+    .capture-area {
+      display: grid;
+      gap: 16px;
+    }
+
+    .camera-preview {
+      width: 100%;
+      max-height: 280px;
+      border-radius: 22px;
+      background: #1f140f;
+      object-fit: cover;
+      border: 1px solid rgba(198, 31, 31, 0.12);
+    }
+
+    .attendance-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .attendance-form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .attendance-field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .attendance-field input,
+    .attendance-field textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(143, 17, 17, 0.16);
+      background: rgba(255, 255, 255, 0.96);
+      outline: none;
+    }
+
+    .attendance-note {
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(255, 122, 0, 0.1);
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .history-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .history-item {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(198, 31, 31, 0.08);
+      display: grid;
+      gap: 8px;
+    }
+
+    .history-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .capture-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .map-box {
+      width: 100%;
+      min-height: 160px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(255, 122, 0, 0.12), rgba(198, 31, 31, 0.12));
+      display: grid;
+      place-items: center;
+      color: var(--red-deep);
+      font-weight: 800;
+      text-align: center;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+  <main class="employee-shell">
+    <header class="topbar">
+      <a class="brand-link" href="employee-dashboard.html">
+        <div class="brand-copy">
+          <strong>Guramrit Restro & Cafe</strong>
+          <span>Attendance</span>
+        </div>
+      </a>
+      <div class="session-pill">Signed in as <span data-user-email>guest</span></div>
+    </header>
+
+    <section class="page-grid">
+      <article class="panel">
+        <p class="section-badge">Attendance</p>
+        <h1>Mark attendance</h1>
+        <p>Capture your photo, collect GPS location, save the timestamp, and store the record in Firebase.</p>
+
+        <div class="capture-area">
+          <video id="camera-preview" class="camera-preview" autoplay playsinline muted></video>
+          <canvas id="photo-canvas" class="camera-preview" style="display:none;"></canvas>
+          <div class="attendance-actions">
+            <button class="primary-btn" id="open-camera" type="button">Open Device Camera</button>
+            <button class="ghost-btn" id="capture-photo" type="button">Capture Photo</button>
+            <button class="ghost-btn" id="get-location" type="button">Get GPS Location</button>
+          </div>
+          <div class="attendance-note" id="status-note">Camera is ready to open. Your attendance photo, location, and timestamp will be stored together.</div>
+        </div>
+
+        <div class="attendance-form" style="margin-top:18px;">
+          <label class="attendance-field"><span>Timestamp</span><input id="attendance-time" type="text" readonly /></label>
+          <label class="attendance-field"><span>Location</span><textarea id="attendance-location" rows="3" readonly></textarea></label>
+        </div>
+
+        <div class="capture-controls" style="margin-top:14px;">
+          <button class="primary-btn" id="save-attendance" type="button">Save to Firebase</button>
+          <button class="ghost-btn" id="refresh-history" type="button">Refresh History</button>
+        </div>
+      </article>
+
+      <article class="panel">
+        <p class="section-badge">History</p>
+        <h2>Attendance history</h2>
+        <div class="history-list" id="attendance-history"></div>
+        <p class="subtle" id="firebase-status">Firebase is ready when config is provided. Local history is available immediately.</p>
+      </article>
+
+      <article class="panel">
+        <p class="section-badge">Map</p>
+        <h2>GPS location</h2>
+        <div class="map-box" id="map-box">GPS location will appear here after you tap Get GPS Location.</div>
+      </article>
+    </section>
+  </main>
+
+  <nav class="nav-shell" aria-label="Employee navigation">
+    <a class="nav-item" href="employee-dashboard.html"><span class="icon">🏠</span><span class="label">Dashboard</span></a>
+    <a class="nav-item" href="employee-orders.html"><span class="icon">📦</span><span class="label">Orders</span></a>
+    <a class="nav-item active" href="employee-attendance.html"><span class="icon">🕒</span><span class="label">Attendance</span></a>
+    <a class="nav-item" href="employee-notifications.html"><span class="icon">🔔</span><span class="label">Notifications</span></a>
+    <a class="nav-item" href="employee-profile.html"><span class="icon">👤</span><span class="label">Profile</span></a>
+  </nav>
+
+  <script src="employee-nav.js"></script>
+  <script src="attendance-store.js"></script>
+  <script src="employee-attendance.js"></script>
+</body>
+</html>

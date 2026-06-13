@@ -1,0 +1,10 @@
+{
+  "liveServer.settings.ignoreFiles": [
+    "**/backend/data/db.json",
+    "**/backend/data/*.json",
+    "**/node_modules/**",
+    "**/.git/**"
+  ],
+  "liveServer.settings.wait": 1000,
+  "liveServer.settings.port": 5500
+}

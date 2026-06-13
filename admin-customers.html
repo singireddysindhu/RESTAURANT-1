@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Admin Customers</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="admin-pages.css" />
+</head>
+<body>
+  <main class="admin-shell dashboard-shell" data-role="admin">
+    <header class="dashboard-header">
+      <a class="brand-link" href="admin-dashboard.html"><div class="brand-copy"><strong>Guramrit Restro & Cafe</strong><span>Customers</span></div></a>
+      <button class="logout-btn" type="button" data-logout>Logout</button>
+    </header>
+    <section class="dashboard-hero"><p class="eyebrow">Customers</p><h1>Customer overview</h1><p>Review customer order activity and recent purchasing patterns.</p></section>
+    <section class="page-grid">
+      <article class="panel"><div class="section-badge">Customer list</div><h2>Saved customers</h2><div class="customer-list" id="customer-list"></div></article>
+      <article class="panel"><div class="section-badge">Order ledger</div><h2>Recent orders</h2><div class="report-list" id="customer-order-list"></div></article>
+    </section>
+  </main>
+  <nav class="manager-nav" aria-label="Admin navigation">
+    <a class="nav-item" href="admin-dashboard.html"><span class="icon">🏠</span><span class="label">Dashboard</span></a>
+    <a class="nav-item" href="admin-menu.html"><span class="icon">🍽️</span><span class="label">Menu</span></a>
+    <a class="nav-item" href="admin-employees.html"><span class="icon">👥</span><span class="label">Employees</span></a>
+    <a class="nav-item active" href="admin-customers.html"><span class="icon">🧑‍🤝‍🧑</span><span class="label">Customers</span></a>
+    <a class="nav-item" href="admin-reports.html"><span class="icon">📊</span><span class="label">Reports</span></a>
+    <a class="nav-item" href="admin-revenue.html"><span class="icon">💰</span><span class="label">Revenue</span></a>
+    <a class="nav-item" href="admin-settings.html"><span class="icon">⚙️</span><span class="label">Settings</span></a>
+  </nav>
+  <script src="auth.js"></script>
+  <script src="order-store.js"></script>
+  <script src="admin-store.js"></script>
+  <script src="admin-nav.js"></script>
+  <script src="admin-customers.js"></script>
+</body>
+</html>

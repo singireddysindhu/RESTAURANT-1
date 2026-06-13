@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Admin Settings</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="admin-pages.css" />
+</head>
+<body>
+  <main class="admin-shell dashboard-shell" data-role="admin">
+    <header class="dashboard-header">
+      <a class="brand-link" href="admin-dashboard.html"><div class="brand-copy"><strong>Guramrit Restro & Cafe</strong><span>Settings</span></div></a>
+      <button class="logout-btn" type="button" data-logout>Logout</button>
+    </header>
+    <section class="dashboard-hero"><p class="eyebrow">Settings</p><h1>Restaurant settings</h1><p>Update contact details and basic system configuration.</p></section>
+    <section class="page-grid">
+      <article class="panel">
+        <div class="section-badge">Configuration</div>
+        <h2>Basic settings</h2>
+        <form id="settings-form" class="field-grid" style="margin-top:16px;">
+          <input id="settings-name" type="text" placeholder="Restaurant name" />
+          <input id="settings-email" type="email" placeholder="Contact email" />
+          <input id="settings-phone" type="text" placeholder="Contact phone" />
+          <input id="settings-location" type="text" placeholder="Location" />
+          <input id="settings-attendance-latitude" type="number" step="any" placeholder="Attendance latitude" />
+          <input id="settings-attendance-longitude" type="number" step="any" placeholder="Attendance longitude" />
+          <input id="settings-attendance-radius" type="number" min="1" step="1" placeholder="Attendance radius in meters" />
+          <input id="settings-currency" type="text" placeholder="Currency" />
+          <button class="primary-btn" type="submit">Save Settings</button>
+        </form>
+      </article>
+      <article class="panel">
+        <div class="section-badge">Current</div>
+        <h2>Saved values</h2>
+        <div class="settings-list" id="settings-list"></div>
+      </article>
+    </section>
+  </main>
+  <nav class="manager-nav" aria-label="Admin navigation">
+    <a class="nav-item" href="admin-dashboard.html"><span class="label">Dashboard</span></a>
+    <a class="nav-item" href="admin-menu.html"><span class="label">Menu</span></a>
+    <a class="nav-item" href="admin-employees.html"><span class="label">Employees</span></a>
+    <a class="nav-item" href="admin-customers.html"><span class="label">Customers</span></a>
+    <a class="nav-item" href="admin-reports.html"><span class="label">Reports</span></a>
+    <a class="nav-item" href="admin-revenue.html"><span class="label">Revenue</span></a>
+    <a class="nav-item active" href="admin-settings.html"><span class="label">Settings</span></a>
+  </nav>
+  <script src="auth.js"></script>
+  <script src="admin-store.js"></script>
+  <script src="admin-nav.js"></script>
+  <script src="admin-settings.js"></script>
+</body>
+</html>

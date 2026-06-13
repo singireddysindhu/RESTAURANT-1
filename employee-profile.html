@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Employee Profile</title>
+  <link rel="stylesheet" href="employee-pages.css" />
+</head>
+<body>
+  <main class="employee-shell">
+    <header class="topbar">
+      <a class="brand-link" href="employee-dashboard.html">
+        <div class="brand-copy">
+          <strong>Guramrit Restro & Cafe</strong>
+          <span>Profile</span>
+        </div>
+      </a>
+      <div class="session-pill">Signed in as <span data-user-email>guest</span></div>
+    </header>
+
+    <section class="page-grid">
+      <article class="profile-card">
+        <p class="section-badge">Profile</p>
+        <h1>Employee profile</h1>
+        <p>View your role, session, and account summary from one clean page.</p>
+        <div class="profile-list">
+          <div class="activity-item"><h3>Name</h3><p data-user-email>guest</p></div>
+          <div class="activity-item"><h3>Role</h3><p>Employee</p></div>
+          <div class="activity-item"><h3>Access</h3><p>Orders, Attendance, Notifications</p></div>
+        </div>
+        <div style="margin-top:16px;">
+          <button class="logout-btn" type="button" data-logout>Logout</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <nav class="nav-shell" aria-label="Employee navigation">
+    <a class="nav-item" href="employee-dashboard.html"><span class="icon">🏠</span><span class="label">Dashboard</span></a>
+    <a class="nav-item" href="employee-orders.html"><span class="icon">📦</span><span class="label">Orders</span></a>
+    <a class="nav-item" href="employee-attendance.html"><span class="icon">🕒</span><span class="label">Attendance</span></a>
+    <a class="nav-item" href="employee-notifications.html"><span class="icon">🔔</span><span class="label">Notifications</span></a>
+    <a class="nav-item active" href="employee-profile.html"><span class="icon">👤</span><span class="label">Profile</span></a>
+  </nav>
+
+  <script src="employee-nav.js"></script>
+</body>
+</html>

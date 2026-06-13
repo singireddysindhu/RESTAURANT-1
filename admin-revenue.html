@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Admin Revenue</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="admin-pages.css" />
+</head>
+<body>
+  <main class="admin-shell dashboard-shell" data-role="admin">
+    <header class="dashboard-header">
+      <a class="brand-link" href="admin-dashboard.html"><div class="brand-copy"><strong>Guramrit Restro & Cafe</strong><span>Revenue</span></div></a>
+      <button class="logout-btn" type="button" data-logout>Logout</button>
+    </header>
+    <section class="dashboard-hero"><p class="eyebrow">Revenue</p><h1>Revenue snapshot</h1><p>Track estimated earnings from saved customer orders and the approval flow.</p></section>
+    <section class="summary-grid">
+      <article class="summary-card"><div class="tile-badge">Today</div><h3 id="revenue-total">₹0</h3><p>Estimated total revenue</p></article>
+      <article class="summary-card"><div class="tile-badge">Average</div><h3 id="revenue-average">₹0</h3><p>Average order value</p></article>
+      <article class="summary-card"><div class="tile-badge">Approved</div><h3 id="revenue-approved">0</h3><p>Approved orders counted</p></article>
+      <article class="summary-card"><div class="tile-badge">Pending</div><h3 id="revenue-pending">0</h3><p>Orders waiting for approval</p></article>
+    </section>
+    <section class="panel" style="margin-top:18px;">
+      <div class="section-badge">Revenue ledger</div>
+      <h2>Order-wise breakdown</h2>
+      <div class="revenue-list" id="revenue-ledger"></div>
+    </section>
+  </main>
+  <nav class="manager-nav" aria-label="Admin navigation">
+    <a class="nav-item" href="admin-dashboard.html"><span class="icon">🏠</span><span class="label">Dashboard</span></a>
+    <a class="nav-item" href="admin-menu.html"><span class="icon">🍽️</span><span class="label">Menu</span></a>
+    <a class="nav-item" href="admin-employees.html"><span class="icon">👥</span><span class="label">Employees</span></a>
+    <a class="nav-item" href="admin-customers.html"><span class="icon">🧑‍🤝‍🧑</span><span class="label">Customers</span></a>
+    <a class="nav-item" href="admin-reports.html"><span class="icon">📊</span><span class="label">Reports</span></a>
+    <a class="nav-item active" href="admin-revenue.html"><span class="icon">💰</span><span class="label">Revenue</span></a>
+    <a class="nav-item" href="admin-settings.html"><span class="icon">⚙️</span><span class="label">Settings</span></a>
+  </nav>
+  <script src="auth.js"></script>
+  <script src="order-store.js"></script>
+  <script src="admin-store.js"></script>
+  <script src="admin-nav.js"></script>
+  <script src="admin-revenue.js"></script>
+</body>
+</html>

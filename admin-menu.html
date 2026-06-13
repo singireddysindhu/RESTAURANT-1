@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guramrit Restro & Cafe | Menu Admin</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="admin-pages.css" />
+  <link rel="stylesheet" href="admin-menu.css" />
+</head>
+<body>
+  <main class="dashboard-shell admin-menu-shell admin-shell" data-role="admin">
+    <header class="dashboard-header">
+      <a class="brand-link" href="admin-dashboard.html">
+        <div class="brand-copy">
+          <strong>Guramrit Restro & Cafe</strong>
+          <span>Menu Admin</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a class="logout-btn back-link-btn" href="admin-dashboard.html">Back to Dashboard</a>
+        <button class="logout-btn" type="button" data-logout>Logout</button>
+      </div>
+    </header>
+
+    <section class="dashboard-hero">
+      <p class="eyebrow">Signed in as admin</p>
+      <h1>Manage menu items</h1>
+      <p>Add or edit items here. Customers will see updates automatically on the menu and checkout pages.</p>
+    </section>
+
+    <section class="admin-grid">
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="section-badge">Add or edit</div>
+            <h2>Menu item form</h2>
+          </div>
+          <button id="reset-form" class="ghost-btn" type="button">Reset</button>
+        </div>
+
+        <form id="menu-form" class="admin-form">
+          <input type="hidden" id="item-id" />
+          <label class="field">
+            <span>Name</span>
+            <input id="item-title" type="text" placeholder="Paneer Wrap" required />
+          </label>
+          <div class="form-row">
+            <label class="field">
+              <span>Category</span>
+              <input id="item-category" type="text" placeholder="Lunch" required />
+            </label>
+            <label class="field">
+              <span>Price</span>
+              <input id="item-price" type="number" min="0" step="1" placeholder="220" required />
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="field">
+              <span>Rating</span>
+              <input id="item-rating" type="number" min="0" max="5" step="0.1" placeholder="4.8" required />
+            </label>
+            <label class="field">
+              <span>Emoji</span>
+              <input id="item-emoji" type="text" maxlength="4" placeholder="🌯" />
+              <small class="field-help">Use an emoji to tag the item in the menu and customer cards.</small>
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="field">
+              <span>Accent Color</span>
+              <input id="item-accent" type="color" value="#ff7a00" />
+            </label>
+            <label class="field">
+              <span>Highlight</span>
+              <input id="item-highlight" type="text" placeholder="Chef special" />
+            </label>
+          </div>
+          <label class="field">
+            <span>Food Image</span>
+            <input id="item-image" type="file" accept="image/*" />
+          </label>
+          <div class="image-preview-shell">
+            <img id="item-image-preview" class="image-preview" alt="Selected food preview" />
+            <p id="item-image-status" class="preview-note">No image selected. Upload a food photo to store it with the menu item.</p>
+          </div>
+          <label class="field">
+            <span>Description</span>
+            <textarea id="item-description" rows="4" placeholder="Describe the dish"></textarea>
+          </label>
+          <div class="check-row">
+            <label><input id="item-featured" type="checkbox" /> Featured</label>
+            <label><input id="item-popular" type="checkbox" /> Popular</label>
+          </div>
+          <button class="primary-btn" type="submit">Save Item</button>
+        </form>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="section-badge">Current menu</div>
+            <h2>Live items</h2>
+          </div>
+          <button id="reset-menu" class="ghost-btn" type="button">Reset Menu</button>
+        </div>
+        <div id="menu-list" class="menu-list"></div>
+      </article>
+    </section>
+
+    <p id="admin-status" class="status-line">Ready</p>
+  </main>
+  <script src="auth.js"></script>
+  <script src="menu-store.js"></script>
+  <script src="admin-store.js"></script>
+  <script src="admin-menu.js"></script>
+</body>
+</html>
+

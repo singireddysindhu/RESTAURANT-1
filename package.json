@@ -1,9 +1,16 @@
 {
-  "name": "guramrit-restro-backend",
+  "name": "guramrit-dashboard",
   "private": true,
   "version": "1.0.0",
   "type": "commonjs",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "web": "node server.js",
+    "backend": "node backend/server.js"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.23.1"
   }
 }
